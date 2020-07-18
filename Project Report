@@ -1,0 +1,37 @@
+Resume Analyzer Model- Project Report
+•	Project Objective: To build a model which would take input as resume and determines the specific role which the resume fits for.
+
+•	Scope of the project: 
+o	Reading the input file
+o	Tokenization using nltk library
+o	Pre-processing 
+o	Finding similarity score between resume and each of the job description. 
+
+•	Tools/Technology used:
+o	Natural language processing
+o	Numpy & pandas
+o	Scikit-learn library
+
+•	Approach:
+o	The resume will be matched against three job descriptions which are “Data Analyst”, “Data Scientist” and “Data Engineer”.
+o	Natural Language processing tools are used for further analysis.
+o	Following steps are done on this corpus:
+o	Tokenization — convert sentences to words
+o	Removing stop words — frequent words such as ”the”, ”is”, etc. that do not have specific meaning
+o	Lemmatization — Another approach to remove inflection by determining the part of speech and utilizing detailed database of the language.
+o	Bag of Words Modelling concept is implemented, which is a way of extracting features from text for using in modelling.
+o	A bag-of-words is a representation of text that describes the occurrence of words within a document. It involves two things:
+o	A vocabulary of known words.
+o	A measure of the presence of known words (we are taking count of words here as I assumed repetition of words can help in find the similarity)
+o	All the above steps are implemented on the uploaded resume file(pdf). 
+o	Once we get vectorized form of the resume, cosine similarity is found out between each of the job description and resume. The pair which gives highest similarity score can be selected as the best job role as per the attached resume.
+o	 Cosine similarity is a metric used to determine how similar two entities are irrespective of their size. Mathematically, it measures the cosine of the angle between two vectors projected in a multi-dimensional space. As cosine similarity doesn’t get effected by the size of the vectors, I selected it rather than going with Euclidean Distance. 
+o	the cosine similarity of two documents will range from 0 to 1. Hence, higher the value we get for resume-job description pair, the more suitable the job description is for the resume. 
+
+•	Future Scope of the project:
+o	We can include more job description so that resume gets compared with various job descriptions and best JD can be selected.
+o	Further pre processing can be done to remove unnecessary words from the corpus which can increase the accuracy of the model.
+o	Option to read different types of input files and also images. We can use pytesseract library for accurate OCR.
+o	Model deployment.
+
+
